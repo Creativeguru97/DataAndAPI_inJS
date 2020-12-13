@@ -1,0 +1,34 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Where is the ISS?</title>
+    <!-- Leaflet.js relevant -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <h1>Where is the ISS?</h1>
+    <p>
+      latitude: <span id='lat'></span><br/>
+      longitude: <span id='lon'></span><br/>
+      velocity: <span id='vel'></span>
+    </p>
+    <!-- On safari, load JavaScript before canvas cause error
+    Reference: https://stackoverflow.com/questions/31952096/html5-canvas-drawing-getcontext2d-null-is-not-an-object-variable-getconte -->
+
+    <div id="issMap"></div>
+    <!-- This fetch.js must be below of the div element above -->
+    <script language="javascript" type="text/javascript" src="fetch.js"></script>
+  </body>
+</html>
